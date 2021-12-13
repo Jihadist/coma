@@ -13,8 +13,9 @@ find_package(
   COMPONENTS Core Xml Widgets
   REQUIRED)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
+find_package(Boost
+    COMPONENTS headers
+    REQUIRED)
 
 set(QDARKSTYLESHEET_PATH
     ${CMAKE_CURRENT_SOURCE_DIR}/styles/QDarkStyleSheet/qdarkstyle)
@@ -44,14 +45,19 @@ add_library(
   checkboxgroup_p.h
   coma.cpp
   coma.h
+  delegate_common.h
   ecombobox.cpp
   ecombobox.h
   edoublespinbox.cpp
   edoublespinbox.h
+  epopup.cpp
+  epopup.h
   errorprotocolwidget.cpp
   errorprotocolwidget.h
   etableview.cpp
   etableview.h
+  flowlayout.cpp
+  flowlayout.h
   ipctrl.cpp
   ipctrl.h
   passwordlineedit.cpp
@@ -86,6 +92,6 @@ target_link_libraries(
   PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
   PRIVATE Qt${QT_VERSION_MAJOR}::Xml
   PRIVATE QXlsx
-  PRIVATE CONAN_PKG::boost)
+  PRIVATE Boost::headers)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_LIBRARY)

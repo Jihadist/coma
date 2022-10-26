@@ -82,4 +82,9 @@ Non gui parts can be compiled for x86 (i386, win32), x86_64 (amd64, win64), armv
 For example, if you want to provide path to conan executable ```CONAN_EXEC``` , you need to append -DCONAN_EXEC=path_to_conan to cmake configure command (look at image).
 
 ![example](example.jpg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJihadist%2Fcoma.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FJihadist%2Fcoma?ref=badge_shield)
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJihadist%2Fcoma.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FJihadist%2Fcoma?ref=badge_large)
